@@ -1,12 +1,8 @@
 const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
 const checkAll = document.querySelector('.special input[type="checkbox"]');
 const otherBoxes = Array.prototype.slice.call(checkboxes);
-let firstBox = otherBoxes.shift();
 
 console.log(otherBoxes);
-console.log(firstBox);
-// console.log(checkboxes);
-// console.log(checkAll);
 
 function checkAllBoxes() {
   if (checkAll.checked) {
