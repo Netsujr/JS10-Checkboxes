@@ -2,8 +2,8 @@ const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
 const checkAll = document.querySelector('.special input[type="checkbox"]');
 const otherBoxes = Array.prototype.slice.call(checkboxes);
 const word = document.querySelector('.special p');
-console.dir(word);
 otherBoxes.shift();
+// console.dir(word);
 // console.log(otherBoxes);
 // console.log(checkAll);
 // console.log(checkboxes);
@@ -44,7 +44,6 @@ function handleCheck(event) {
   lastChecked = this;
   // console.log(lastChecked);
 }
-
 
 checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
 checkAll.addEventListener('click', checkAllBoxes);
