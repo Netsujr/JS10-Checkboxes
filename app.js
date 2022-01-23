@@ -1,13 +1,19 @@
 const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
 const checkAll = document.querySelector('.special input[type="checkbox"]');
 const otherBoxes = Array.prototype.slice.call(checkboxes);
-
+otherBoxes.shift();
 console.log(otherBoxes);
+console.log(checkAll);
+// console.log(checkboxes);
 
 function checkAllBoxes() {
   if (checkAll.checked) {
     otherBoxes.forEach(otherBox => {
-      otherBox.checked = !otherBox.checked;
+      otherBox.checked = true;
+    });
+  } else {
+    otherBoxes.forEach(otherBox => {
+      otherBox.checked = false;
     });
   }
 }
