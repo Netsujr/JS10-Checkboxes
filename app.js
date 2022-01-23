@@ -5,14 +5,19 @@ let lastChecked;
 
 function handleCheck(event) {
   console.log(event);
-  let inBetween = false
+  let inBetween = false;
   if(event.shiftKey && this.checked) {
-checkboxes.forEach(checkbox => {
-  console.log(checkbox);
-  if(checkbox === this || checkbox === lastChecked) {
-    inBetween = true;
-  }
-});
+    checkboxes.forEach(checkbox => {
+      console.log(checkbox);
+      if(checkbox === this || checkbox === lastChecked) {
+        inBetween = !inBetween;
+        console.log('Between Here?');
+      }
+
+      if(inBetween) {
+        checkbox.checked = true;
+      }
+    });
   }
   lastChecked = this;
   console.log(lastChecked);
