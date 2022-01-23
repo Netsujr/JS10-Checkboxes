@@ -8,16 +8,19 @@
 </head>
 <body>
 
-   <!--
-   The following is a common layout you would see in an email client.
+  <!--
+    The following is a common layout you would see in an email client.
 
-   When a user clicks a checkbox, holds Shift, and then clicks another checkbox a few rows down, all the checkboxes inbetween those two checkboxes should be checked.
+    When a user clicks a checkbox, holds Shift, and then clicks another checkbox a few rows down, all the checkboxes inbetween those two checkboxes should be checked.
 
   -->
   <div class="inbox">
     <div class="item special">
       <input type="checkbox">
-      <p>Check All Boxes</p>
+      <div class="pContainer">
+        <p style="padding: 10px 20px; padding-bottom: 0;">Check All Boxes</p>
+        <p id='instructions'>Hold shift to select multiple boxes</p>
+      </div>
     </div>
     <div class="item">
       <input type="checkbox">

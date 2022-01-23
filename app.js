@@ -1,18 +1,22 @@
 const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
 const checkAll = document.querySelector('.special input[type="checkbox"]');
 const otherBoxes = Array.prototype.slice.call(checkboxes);
+const word = document.querySelector('.special p');
+console.dir(word);
 otherBoxes.shift();
-console.log(otherBoxes);
-console.log(checkAll);
+// console.log(otherBoxes);
+// console.log(checkAll);
 // console.log(checkboxes);
 
 function checkAllBoxes() {
   if (checkAll.checked) {
     otherBoxes.forEach(otherBox => {
+      word.innerHTML = 'Un-Check All Boxes';
       otherBox.checked = true;
     });
   } else {
     otherBoxes.forEach(otherBox => {
+      word.innerHTML = 'Check All Boxes';
       otherBox.checked = false;
     });
   }

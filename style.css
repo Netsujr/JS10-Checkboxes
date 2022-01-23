@@ -21,6 +21,17 @@ html {
   border-bottom: 3px solid #868686;
 }
 
+.pContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#instructions {
+    font-size: 12px;
+    padding: 5px 20px;
+  }
+
 .special input:checked + p {
   background: #f9f9f9;
   text-decoration: none !important;
